@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+		<meta name="csrf-token" content="GFPFAKflVEdAAETPRKhmXqVt6xIP7sS6oOEXHTcE">
+		<title>小组件</title>
+		<meta name="apple-itunes-app" content="app-id=1532861207,app-clip-bundle-id=com.zh.shakePhoto.Clip">
+	</head>
+
+    <style>
+    	   .fixback
+    	   {
+    	   	display: block;
+    	   	width: 100%;
+    	   	height: 100%;
+    	   	line-height: 0px;
+    	   	position: fixed;
+    	   	left: 0;
+    	   	top: 0;
+    	   	background-color: rgb(245,245,245);
+    	   }
+    	   .nametext{
+    	   	text-align: center;
+    	   	margin-left: auto;
+    	   	margin-right: auto;
+    	   	font-size: 18px;
+    	   	font-weight: 600;
+    	   	margin-top: 40px;
+    	   	display: block;
+    	   }
+    	   .iconimg
+    	   {
+    	   	display: block;
+    	   	width: 110px;
+    	   	height: 110px;
+    	   	margin-left: auto;
+    	   	margin-right: auto;
+    	   	margin-top: 50px;
+    	   	border-radius: 10px;
+    	   }
+    	   .downbtn
+    	   {
+    	   	width: 280px;
+    	   	height: 50px;
+    	   	background-color: rgb(2,208,130);
+    	   	text-align: center;
+    	   	line-height: 50px;
+    	   	margin-left: auto;
+    	   	margin-right: auto;
+    	   	border: hidden;
+    	   	font-size: 16px;
+    	   	color: white;
+    	   	margin-top: 50px;
+    	   	border-radius: 6px;
+    	   }
+    	   .context
+    	   {
+    	   	display: block;
+    	   	margin-left: auto;
+    	   	margin-right: auto;
+    	   	margin-top: 30px;
+    	   	width: 280px;
+    	   	line-height: 24px;
+    	   	font-size: 15px;
+    	   	font-weight: 600;
+    	   	color: rgba(0,0,0,0.8);
+    	   }
+    </style>
+
+	<body style="text-align: center;">
+
+	<div id="copy-txt">
+	</div>
+
+	<div class="fixback">
+
+		<img class="iconimg" src="img/apppic.png" />
+
+		<label class="nametext">小组件 - 桌面万能小组件</label>
+		
+		<label class="context">
+			全网独家一键替换iPhone图标，完美换图标无跳转直接打开，多种图标模板自由选择，多种桌面小组件自由定制，可添加多张桌面图片组件，多款日期时间组件，多款生成生日倒计时组件，欢迎下载体验！
+		</label>
+
+		<button class="downbtn" onclick="copyTXT()">去下载</button>
+
+	</div>
+
+    </body>
+    <script>
+
+    	var copyDOM = document.querySelector('#copy-txt');
+    	copyDOM.innerText = this.location.href;
+
+    function copyTXT(){
+    	
+    	window.location.href="https://itunes.apple.com/cn/app/id1532861207?mt=8";
+    	
+    var range = document.createRange(); // 创建容器
+    range.selectNode(copyDOM); // 选中需要复制的节点
+    window.getSelection().addRange(range); // 执行选中元素
+    var successful = document.execCommand('copy');// 执行 copy 操作
+    try {
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copy was ' + msg);
+    } catch(err) {
+        console.log('unable to copy');
+    }
+    window.getSelection().removeAllRanges(); // 移除选中的元素
+    
+    
+}
+
+    </script>
+
+</html>
